@@ -15,19 +15,40 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('main.index') }}">Microblog</a>
+                <a class="navbar-brand bg-danger" href="{{ url_for('main.index') }}">{{ _('boardway circuit') }}</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav bg-danger">
                     <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
                     <li><a href="{{ url_for('main.explore') }}">{{ _('Explore') }}</a></li>
+                    <li><a href="https://www.facebook.com/page.Broadway.PALACE.AMC">{{ _('Facebook') }}</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav nav-item dropdown bg-danger">
+                    <a class="nav-link dropdown-toggle collapse navbar-collapse" id="navbarDropdown" href="#" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ _('Cinema Maps') }}</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/MOViE+MOViE+Cityplaza/@22.285597,114.2150111,17z/data=!3m2!4b1!5s0x340401736f98973b:0x1e54ca82ac42ef29!4m5!3m4!1s0x340401736c6914e5:0xaad9b80d58022a6f!8m2!3d22.285597!4d114.2171998?hl=en-us">{{ _('MOViE MOViE Cityplaza') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/百老匯+PALACE+ifc/@22.2851404,114.1572794,18z/data=!3m1!5s0x3404006371c4ec15:0xb22ccd0f658a40b0!4m13!1m7!3m6!1s0x34040063041096a1:0xf6c429a6ef8975ca!2z5Lit55Kw5ZyL6Zqb6YeR6J6N5Lit5b-D5ZWG5aC05pqo5qmf5aC05b-r57ea6aaZ5riv56uZ!3b1!8m2!3d22.285831!4d114.1582283!3m4!1s0x0000000000000000:0x278facbc3b7d00ba!8m2!3d22.2855932!4d114.1581423?hl=en-US">{{ _('PALACE ifc') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/Cyberport+Broadway+Theatres/@22.2610735,114.1272968,17z/data=!3m2!4b1!5s0x3403ffefbcc875f5:0xbfc4bf6e9d1423a0!4m5!3m4!1s0x340400c074efada1:0xb1667388a7460119!8m2!3d22.2610735!4d114.1294855?hl=en-US">{{ _('CYBERPORT ') }}</a></li>
+                        <br>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/Premiere+Cinemas/@22.304445,114.1604122,17z/data=!4m8!1m2!2m1!1sPREMIERE+ELEMENTS!3m4!1s0x340401ac192abbf7:0x208aaa791e8aa93a!8m2!3d22.3040112!4d114.1628462?hl=en-us">{{ _('       PREMIERE ELEMENTS') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/Broadway+Cinema+Plaza+Hollywood/@22.3403894,114.200872,17z/data=!3m1!4b1!4m5!3m4!1s0x340406db249800a3:0x606678a1d7658390!8m2!3d22.3403894!4d114.2030607?hl=en">{{ _('HOLLYWOOD') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/Broadway+Cinema/@22.2998909,114.170599,17z/data=!3m1!4b1!4m5!3m4!1s0x340400edcc358d8f:0xd4add7eecc9d6236!8m2!3d22.2998909!4d114.1727877?hl=en">{{ _('The ONE') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/Broadway+Cinematheque/@22.3107009,114.1667297,17z/data=!3m1!4b1!4m2!3m1!1s0x340400c06baf86c7:0xc85e21d919df856a?hl=en&shorturl=1">{{ _('CINEMATHEQUE') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/Mongkok+Broadway+Theatre,+6-12+Sai+Yeung+Choi+St+S,+Mong+Kok/@22.3170779,114.1684628,17z/data=!3m1!4b1!4m2!3m1!1s0x340400c70024c4b7:0x5287f7ac31ed3ada?hl=en&shorturl=1">{{ _('MONGKOK') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/百老滙電器/@22.3124101,114.2229691,17z/data=!4m12!1m6!3m5!1s0x3404014f91664e0b:0x12a4b5db2b429cae!2sPALACE+apm!8m2!3d22.3122535!4d114.2251183!3m4!1s0x3404014f96cdb22f:0x1cd9f1c03073e2a0!8m2!3d22.312401!4d114.225136?hl=en">{{ _('PALACE apm') }}</a></li>
+                        <br>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/YOHO+MALL+I/@22.4445422,114.0336104,17z/data=!4m8!1m2!2m1!1sYOHO+MALL!3m4!1s0x0:0xadacb597b6c2b9db!8m2!3d22.4435333!4d114.0366302">{{ _('MY CINEMA YOHO MALL') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/Broadway+Cinema/@22.3574418,114.1240083,17z/data=!3m2!4b1!5s0x3403f8bc2d65a63f:0x64dca853ce713750!4m5!3m4!1s0x3403f8bc2ba8a565:0xfa86667580667319!8m2!3d22.3574418!4d114.126197?hl=en">{{ _('KWAI FONG') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/Broadway+Theatre/@22.3711324,114.1089027,17z/data=!3m1!4b1!4m5!3m4!1s0x3403f8ef0361db69:0xa0aa393a237019dd!8m2!3d22.3711324!4d114.1110914?hl=en">{{ _('TSUEN WAN') }}</a></li>
+                        <li><a class="dropdown-item" href="https://www.google.com.hk/maps/place/Broadway+Cinemas/@22.4519484,113.9826573,13z/data=!4m12!1m6!3m5!1s0x340400c72d9604d5:0xfc85bc223ac7958c!2sBroadway+Kingswood+Ginza!8m2!3d22.4570199!4d114.0032141!3m4!1s0x3403f087d261e087:0xc9bba7cce48c957!8m2!3d22.457042!4d114.003192?hl=en">{{ _('KINGSWOOD GINZA') }}</a></li>
+                    </div>
+                </ul>
+                <ul class="nav navbar-nav navbar-right bg-danger">
                     {% if current_user.is_anonymous %}
                         <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('main.user', username=current_user.username) }}">{{ _('Profile') }}</a>
-                        </li>
+                        <li><a href="{{ url_for('main.user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
                         <li><a href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a></li>
                     {% endif %}
                 </ul>

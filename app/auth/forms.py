@@ -1,8 +1,7 @@
 from flask_babel import lazy_gettext as _l, _
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, ValidationError
+from wtforms import StringField, PasswordField, BooleanField, RadioField, SubmitField, ValidationError
 from wtforms.validators import DataRequired, Email, EqualTo
-
 from app.models import User
 
 
@@ -20,6 +19,8 @@ class RegistrationForm(FlaskForm):
     password2 = PasswordField(
         _l('Repeat Password'), validators=[DataRequired(),
                                            EqualTo('password')])
+    givenname = StringField(_l('Given Name'), validators=[DataRequired()])
+    gender = RadioField(_l('Gender'), choices=[('M', 'Male'), ('F', 'Female')])
     submit = SubmitField(_l('Register'))
 
     def validate_username(self, username):
@@ -44,3 +45,4 @@ class ResetPasswordForm(FlaskForm):
         _l('Repeat Password'), validators=[DataRequired(),
                                            EqualTo('password')])
     submit = SubmitField(_l('Request Password Reset'))
+
